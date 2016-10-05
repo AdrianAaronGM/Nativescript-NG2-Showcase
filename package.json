@@ -1,15 +1,15 @@
 {
     "description": "GFT's NativeScript Showcase",
-    "license": "SEE LICENSE IN <your-license-filename>",
+    "license": "SEE LICENSE IN LICENCE.md",
     "readme": "NativeScript Application",
-    "repository": "<fill-your-repository-here>",
+    "repository": "https://github.com/Appverse/Nativescript-NG2-Showcase",
     "nativescript": {
         "id": "org.nativescript.showcase",
         "tns-ios": {
-            "version": "2.3.0"
+            "version": "2.4.0-2016-9-28-1"
         },
         "tns-android": {
-            "version": "2.3.0"
+            "version": "2.4.0-next-2016-10-05-1204"
         }
     },
     "dependencies": {
