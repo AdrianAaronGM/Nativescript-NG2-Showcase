@@ -10,7 +10,7 @@ module.exports = function () {
             .should.eventually.notify(callback);
     }
     
-    this.When(/^I am on the main page$/, function (callback) {
+    this.Given(/^I am on the main page$/, function (callback) {
         this.driver
             .elementByAccessibilityId('mainPage')
             .should.eventually.exist
@@ -19,10 +19,6 @@ module.exports = function () {
 
     this.Given(/^I open the sidedrawer$/, function (callback) {
         tap.call(this, 'toggleSideDrawerButton', callback);
-    });
-
-    this.Given(/^I open the subSideDrawer "(.*)"$/, function (button, callback) {
-        tap.call(this, button + 'Button', callback);
     });
 
     this.Given(/^Platform is "(.*)"$/, function (platformName, callback) {
@@ -40,6 +36,10 @@ module.exports = function () {
             .elementByAccessibilityId(element)
             .should.eventually.exist
             .and.notify(callback);
+    });
+
+    this.When(/^I open the subSideDrawer "(.*)"$/, function (button, callback) {
+        tap.call(this, button + 'Button', callback);
     });
 
     this.When(/^I Select the button "(.*)"$/, function (button, callback) {
