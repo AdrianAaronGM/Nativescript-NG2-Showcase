@@ -15,7 +15,7 @@ Feature: Router navigation
   Scenario: Page Home
     Given I wait for "sideDrawer"
     When I Select the button "HomeButton"
-      And I wait for "welcomeMeassage"
+      And I wait for "welcomeMessage"
     Then I should read "Welcome to GFT's NativeScript Showcase" in "welcomeMessage"
 
 # BUTTONS PAGE TEST

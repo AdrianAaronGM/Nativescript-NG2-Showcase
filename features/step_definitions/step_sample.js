@@ -12,7 +12,7 @@ module.exports = function () {
 
     this.Given(/^I wait for "([^"]*)"$/, function(arg1, callback) {
         this.driver
-                .waitForElementByAccessibilityId('mainPage', 120000, 5000, callback)
+                .waitForElementByAccessibilityId(arg1, 200000, 5000, callback)
                 .should.eventually.exist
                 .and.notify(callback);
     });
