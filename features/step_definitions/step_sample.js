@@ -9,6 +9,13 @@ module.exports = function () {
             .tap()
             .should.eventually.notify(callback);
     }
+
+    this.Given(/^I wait for "([^"]*)"$/, function(arg1, callback) {
+        this.driver
+                .waitForElementByAccessibilityId('mainPage', 120000, 5000, callback)
+                .should.eventually.exist
+                .and.notify(callback);
+    });
     
     this.Given(/^I am on the main page$/, function (callback) {
         this.driver

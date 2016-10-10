@@ -4,18 +4,18 @@ Feature: Router navigation
 
 # HOME PAGE TEST
   Scenario: Initializing
-    Given I wait "10000"
-    When I am on the main page
+    Given I wait for "mainPage"
     Then I should see "toggleSideDrawerButton"
   
   Scenario: Open side drawer
-    Given I can see "toggleSideDrawerButton"
+    Given I wait for "toggleSideDrawerButton"
     When I Select the button "toggleSideDrawerButton"
     Then I should see "sideDrawer"
 
   Scenario: Page Home
-    Given I can see "sideDrawer"
+    Given I wait for "sideDrawer"
     When I Select the button "HomeButton"
+      And I wait for "welcomeMeassage"
     Then I should read "Welcome to GFT's NativeScript Showcase" in "welcomeMessage"
 
 # BUTTONS PAGE TEST
