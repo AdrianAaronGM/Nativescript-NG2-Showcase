@@ -25,6 +25,7 @@ Feature: Router navigation
       And I Select the button "buttonsButton"
       And I wait for "BUTTONStitle"
     Then I should read "BUTTONS" in "BUTTONStitle"
+      And I wait "5000"
 
 # TEXT PAGE TEST
   Scenario: Page "text"
