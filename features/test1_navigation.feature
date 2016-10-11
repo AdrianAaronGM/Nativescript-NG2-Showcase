@@ -4,7 +4,7 @@ Feature: Router navigation
 
 # HOME PAGE TEST
   Scenario: Initializing
-    Given I wait for "mainPage"
+    Given I wait for "toggleSideDrawerButton"
     Then I should see "toggleSideDrawerButton"
   
   Scenario: Open side drawer
